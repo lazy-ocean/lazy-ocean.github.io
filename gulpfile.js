@@ -50,11 +50,12 @@ gulp.task("server", function () {
     open: true,
     cors: true,
     ui: false,
+    index: "tops.html",
   });
 
   gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("css", "sass"));
   gulp.watch("src/*.html", gulp.series("copy", "refresh"));
-  gulp.watch("src/js/**/*.js", gulp.series("js"));
+  gulp.watch("src/*.js", gulp.series("js"));
 });
 
 gulp.task("refresh", function (done) {
@@ -89,7 +90,7 @@ gulp.task("cv", function () {
 
 gulp.task("js", () =>
   browserify({
-    entries: "./src/js/index.js",
+    entries: "./src/index.js",
   })
     .transform("babelify", {
       presets: ["@babel/preset-env"],

@@ -1,13 +1,8 @@
 header {
   width: 100%;
   margin: 0;
-  min-height: 25rem;
+
   padding: 5rem 18rem;
-  background: linear-gradient(
-    176deg,
-    $color-yellow 0%,
-    $color-yellow-dark 100%
-  );
   box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
     0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
   z-index: 1000;
@@ -16,6 +11,19 @@ header {
   @media only screen and (max-width: $bp-largest) {
     padding: 5rem 8rem;
   }
+}
+
+.header--projects {
+  min-height: 25rem;
+  background: linear-gradient(
+    176deg,
+    $color-yellow 0%,
+    $color-yellow-dark 100%
+  );
+}
+.header--tops {
+  min-height: 20rem;
+  background: linear-gradient(176deg, $color-pink 0%, $color-pink-dark 100%);
 }
 
 .header__container {

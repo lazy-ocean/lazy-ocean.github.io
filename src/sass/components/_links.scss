@@ -4,6 +4,14 @@ a:visited {
   color: $color-font-grey;
 }
 
+.a--cut {
+  border-bottom: dashed 2px $color-yellow;
+  width: fit-content;
+  font-size: 2rem;
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
 .a--animated,
 .a--animated:visited {
   transition: all 0.1s;

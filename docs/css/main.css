@@ -84,6 +84,15 @@ a:visited {
   text-decoration: none;
   color: #454545; }
 
+.a--cut {
+  border-bottom: dashed 2px #ffe0ac;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  padding-top: 1rem;
+  cursor: pointer; }
+
 .a--animated,
 .a--animated:visited {
   -webkit-transition: all 0.1s;
@@ -117,9 +126,7 @@ a:visited {
 header {
   width: 100%;
   margin: 0;
-  min-height: 25rem;
   padding: 5rem 18rem;
-  background: linear-gradient(176deg, #ffe0ac 0%, #ffc563 100%);
   -webkit-box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
           box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
   z-index: 1000;
@@ -127,6 +134,14 @@ header {
   @media only screen and (max-width: 75em) {
     header {
       padding: 5rem 8rem; } }
+
+.header--projects {
+  min-height: 25rem;
+  background: linear-gradient(176deg, #ffe0ac 0%, #ffc563 100%); }
+
+.header--tops {
+  min-height: 20rem;
+  background: linear-gradient(176deg, #ffe2eb 0%, #ffc4d6 100%); }
 
 .header__container {
   display: -webkit-box;
@@ -225,7 +240,6 @@ header {
   position: sticky;
   top: 10px; }
   .card__text {
-    padding-right: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -273,6 +287,7 @@ header {
   .card__pic {
     max-width: 20rem; }
   .card__pics {
+    padding-left: 3rem;
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(3, 30%);
@@ -292,6 +307,10 @@ header {
     .card__pics .pic2 {
       -webkit-box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
               box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108); }
+
+ol {
+  list-style: decimal;
+  font-size: 2rem; }
 
 .card:nth-child(1n) {
   top: 20px;
@@ -370,6 +389,28 @@ header {
 
 .crossed {
   text-decoration: line-through; }
+
+.top__pics {
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 100%;
+  height: 35rem;
+  margin: 2rem 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 40% 0;
+     object-position: 40% 0; }
+  @media only screen and (max-width: 37.5em) {
+    .top__pics {
+      display: none; } }
+
+.hidden {
+  display: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.card__text--list-h {
+  padding-top: 0; }
 
 .skills {
   max-width: 1440px;
